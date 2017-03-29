@@ -335,8 +335,8 @@ CREATE TABLE inox (
 for x, y in zip(MovieList, movieQueryResultList): 
 	#trailer string has spaces and string symbols, remove then before insert 
 	y = y.replace(" ","") 
-	#movie_Trailer = y
-	movie_Trailer = "c4VF_m8zvo4"
+	movie_Trailer = y
+	#movie_Trailer = "c4VF_m8zvo4"
 	movie_Image = x['movie_Image'] 
 	movie_Language = x['movie_Language'] 
 	movie_Name = x['movie_Name'] 
