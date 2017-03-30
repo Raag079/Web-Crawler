@@ -26,5 +26,5 @@ sudo apt-get install oracle-java9-installer
 spark-2.0.0-bin-hadoop2.7/bin/spark-submit spark-2.0.0-bin-hadoop2.7/examples/src/main/python/pi.py 10
 
 #Run WebCrawler
-cd Web-Crawler/
+cd nammaMysuru/
 python nammaMysuru.py
