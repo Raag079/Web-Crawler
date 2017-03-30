@@ -9,7 +9,7 @@ pip install wikipedia --user
 sudo apt-get install sqlite3
 
 #Clone git repo
-git clone https://github.com/Raag079/Web-Crawler.git
+#git clone https://github.com/Raag079/Web-Crawler.git
 
 #Download and configure Apache Spark
 wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-hadoop2.7.tgz
