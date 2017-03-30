@@ -20,8 +20,8 @@ cur = conn.cursor()
 ##set Wiki language to English
 wikipedia.set_lang('en')
 
-##URL to crawl - http://www.masthmysore.com/movies-in-mysore 
-r = urllib.urlopen('http://www.masthmysore.com/movies-in-mysore').read()
+##URL to crawl -  
+r = urllib.urlopen().read()
 soup = BeautifulSoup(r, "html.parser")
 
 ##Movie Data is in Table
