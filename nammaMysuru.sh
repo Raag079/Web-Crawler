@@ -14,8 +14,8 @@ sudo apt-get install sqlite3
 #Download and configure Apache Spark
 wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-hadoop2.7.tgz
 tar -xvzf spark-2.0.0-bin-hadoop2.7.tgz
-echo 'export SPARK_HOME=$PWD/spark-2.0.0-bin-hadoop2.7' >> ~/.bashrc
-echo 'export PATH=\$PATH:\$SPARK_HOME/bin' >> ~/.bashrc
+echo export SPARK_HOME=$PWD/spark-2.0.0-bin-hadoop2.7 >> ~/.bashrc
+echo export PATH=\$PATH:\$SPARK_HOME/bin >> ~/.bashrc
 
 #Install Java9
 sudo apt-add-repository ppa:webupd8team/java
