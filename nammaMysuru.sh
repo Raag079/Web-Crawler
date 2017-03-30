@@ -22,6 +22,10 @@ sudo apt-add-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java9-installer
 
+#Clean Up downloaded files
+rm get-pip.py
+rm spark-2.0.0-bin-hadoop2.7.tgz
+
 #Test Spark
 spark-2.0.0-bin-hadoop2.7/bin/spark-submit spark-2.0.0-bin-hadoop2.7/examples/src/main/python/pi.py 10
 
