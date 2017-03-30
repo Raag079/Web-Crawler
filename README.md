@@ -12,9 +12,13 @@ This Crawler uses [Beautiful Soup](https://en.wikipedia.org/wiki/Beautiful_Soup_
 
 Then I use [SQLITE3](https://docs.python.org/3/library/sqlite3.html) python package to store the data into database. Since the theater details (address, gps co-ordinates etc..,) doesn't change, I have a table in my database named theater_detail that has all the information about theaters. When I run this python, I also have a sqlite database file called 'nammaMysuru.sqlite' which has this table.
 
+I have created a shell script that set up crawler environment. This script sets up Apache Spark along with dependencies for crawler. I am using Apache spark when searching for trailer on YouTube. When I search for trailer for movies one after the after the other it takes approximately 40s (tested on raspberryPi) for each movie. This is due to delay in searching (network delay) and parsing the result (processing delay). So I have integrated Apache Spark which uses Map Reduce and spawns multiple thread to search for the list of movies I provide as input.
+
 ## Installation
 
-### Install the following dependencies
+### Manual Installation
+
+#### Install the following dependencies
 
 1. Beautiful Soup 
 ```shell
@@ -36,6 +40,17 @@ $ pip install wikipedia --user
 3. SQLITE 3
 ```shell
 $ sudo apt-get install sqlite3
+```
+
+### Automated Installation
+
+#### Install using the shell script
+
+1. Clone this repository to any of the folder on linux (I downloaded to my desktop) and execute the following 
+```shell
+$ cd Web-Crawler
+$ chmod +x nammaMysuru.sh
+$ ./nammaMysuru.sh
 ```
 
 ## Usage
