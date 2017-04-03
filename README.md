@@ -14,6 +14,8 @@ Then I use [SQLITE3](https://docs.python.org/3/library/sqlite3.html) python pack
 
 I have created a shell script that set up crawler environment. This script sets up Apache Spark along with dependencies for crawler. I am using Apache spark when searching for trailer on YouTube. When I search for trailer for movies one after the after the other it takes approximately 40s (tested on raspberryPi) for each movie. This is due to delay in searching (network delay) and parsing the result (processing delay). So I have integrated Apache Spark which uses Map Reduce and spawns multiple thread to search for the list of movies I provide as input.
 
+To better understand the code, I have included the [html source file](https://github.com/Raag079/web-crawler/blob/master/view-source.pdf) in the repository.
+
 ## Installation
 
 ### Manual Installation
