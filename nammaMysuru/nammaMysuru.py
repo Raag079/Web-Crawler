@@ -20,8 +20,8 @@ cur = conn.cursor()
 ##set Wiki language to English
 wikipedia.set_lang('en')
 
-##URL to crawl -  
-r = urllib.urlopen().read()
+##URL to crawl - http://www.masthmysore.com/movies-in-mysore
+r = urllib.urlopen('http://www.masthmysore.com/movies-in-mysore').read()
 soup = BeautifulSoup(r, "html.parser")
 
 ##Movie Data is in Table
@@ -351,10 +351,27 @@ for x in TheaterList:
 	show_timings = str(x['show_timings'])
 	theaterName = str(x['theaterName'])
 	
+	print(theaterName)
+	print(movie_Name)
+
+	if theaterName == '4':
+		continue
+
+        if theaterName == '10':
+                continue
+        if theaterName == '30 AM':
+                continue
+
+	if theaterName == '9':
+		continue
+
+	if theaterName == '(2D)Rajkamal':
+		theaterName = 'Rajkamal'
+
 	cur.execute('SELECT id FROM theaterDetail WHERE theaterName = ? ', (theaterName, ))
 	
 	theater_id = cur.fetchone()[0] 
-	
+
 	cur.execute('''INSERT OR IGNORE INTO theater (Multiplex_ClassName, movie_Name, Multiplex, show_timings, theaterName, theaterID) VALUES ( ?, ?, ?, ?, ?, ? )''', (Multiplex_ClassName, movie_Name, Multiplex, show_timings, theaterName, theater_id) )
 
 for x in DRCList:
