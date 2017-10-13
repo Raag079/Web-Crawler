@@ -4,7 +4,7 @@
 sudo apt-get install python-bs4
 wget https://bootstrap.pypa.io/get-pip.py
 chmod +x get-pip.py
-python3 get-pip.py --user
+python get-pip.py --user
 pip install wikipedia --user
 pip install pyopenssl ndg-httpsclient pyasn1 --user
 sudo apt-get install sqlite3
